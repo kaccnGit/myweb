@@ -18,8 +18,22 @@ def doSearch(request):
     samplecode = request.GET.get("sampleCode")
     print("需要检验的样本编号是：" + samplecode)
     if samplecode == '1':
-        return render(request, 'search.html', {'result': '是芯片'})
+        return render(request, 'search.html', {'samplecode':samplecode,'result': '是芯片'})
     if samplecode == '2':
-        return render(request, 'search.html', {'result': '是panel'})
+        return render(request, 'search.html', {'samplecode':samplecode,'result': '是panel'})
     else:
-        return render(request, 'search.html', {'result': '无此样本编号'})
+        return render(request, 'search.html', {'samplecode':samplecode,'result': '无此样本编号'})
+
+# 添加 execute 函数，返回 execute.html 页面
+def execute(request):
+    return render(request, 'execute.html')
+
+
+# 执行查询操作
+def doExecute(request):
+    samplecode = request.GET.get("sampleCode")
+    print("需要上传检测结果的样本编号是：" + samplecode)
+    if samplecode == '1':
+        return render(request, 'execute.html', {'samplecode':samplecode,'result': '上传结果生成报告执行成功！'})
+    else:
+        return render(request, 'execute.html', {'samplecode':samplecode,'result': '执行失败！'})
