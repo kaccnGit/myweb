@@ -16,9 +16,10 @@ def search(request):
 # 执行查询操作
 def doSearch(request):
     samplecode = request.GET.get("sampleCode")
+    print(request)
     print("需要检验的样本编号是：" + samplecode)
     if samplecode == '1':
-        return render(request, 'search.html', {'samplecode':samplecode,'result': '是芯片'})
+        return render(request, 'search.html', {'samplecode':samplecode,'result': '能够生成'})
     if samplecode == '2':
         return render(request, 'search.html', {'samplecode':samplecode,'result': '是panel'})
     else:
