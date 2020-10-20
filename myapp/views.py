@@ -34,6 +34,10 @@ def execute(request):
 def doExecute(request):
     samplecode = request.GET.get("sampleCode")
     print("需要上传检测结果的样本编号是：" + samplecode)
+    #开始上传
+
+    #上传结束
+
     if samplecode == '1':
         return render(request, 'execute.html', {'samplecode':samplecode,'result': '上传结果生成报告执行成功！'})
     else:
