@@ -21,5 +21,8 @@ from myapp import views # 在这里添加这一行代码，导入 views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),    # 在这里添加这一行代码，这是我们上一步编写的视图函数的路由，默认是 / 路径
+    path('search', views.search),    # 在这里添加这一行代码，这是我们上一步编写的视图函数的路由，默认是 / 路径
+    path('doSearch', views.doSearch),    # 在这里添加这一行代码，这是我们上一步编写的视图函数的路由，默认是 / 路径
+
 
 ]
