@@ -1,0 +1,8 @@
+{
+    "upload_args": {
+        "url": "http://infoapi.dev.1genehealth.com/biology/bio/report/analyse",
+        "headers": {"content-type": "application/json"},
+        "report_path": "/Users/zilinglin/mycode/python/myweb/data"
+    },
+    "sample_type_file": "/Users/zilinglin/mycode/python/myweb/data/sample_type.txt"
+}
